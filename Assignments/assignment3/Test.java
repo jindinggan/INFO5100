@@ -1,7 +1,6 @@
 package assignment3;
 
 public class Test {
-    @SuppressWarnings("checkstyle:WhitespaceAfter")
     public static void main(String[] args) {
         Student a = new Student("a", "001");
         Student b = new Student("b", "002");
