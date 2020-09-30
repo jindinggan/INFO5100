@@ -15,7 +15,7 @@ public class Course {
 
     public void registerStudent(Student student) {
         if (!this.isFull()) {
-            this.registeredStudent[0] = student;
+            this.registeredStudent[this.numberOfStudent] = student;
             this.numberOfStudent++;
         } else {
             throw new IllegalArgumentException(this.getName() + " is FULL!");

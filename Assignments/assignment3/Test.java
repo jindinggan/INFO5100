@@ -1,6 +1,7 @@
 package assignment3;
 
 public class Test {
+    @SuppressWarnings("checkstyle:WhitespaceAfter")
     public static void main(String[] args) {
         Student a = new Student("a", "001");
         Student b = new Student("b", "002");
@@ -24,6 +25,10 @@ public class Test {
         info5100.registerStudent(h);
         info5100.registerStudent(i);
         info5100.registerStudent(j);
-        
+        System.out.print("The list of students who registered INFO5100: ");
+        for (int count = 0; count < info5100.getNumberOfStudent(); count++) {
+            System.out.print(info5100.getStudents()[count].getName() + " ");
+        }
+        System.out.println();
     }
 }
