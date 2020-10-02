@@ -24,10 +24,23 @@ public class Test {
         info5100.registerStudent(h);
         info5100.registerStudent(i);
         info5100.registerStudent(j);
-        System.out.print("The list of students who registered INFO5100: ");
+        System.out.print("The list of students who registered INFO5100 are: ");
         for (int count = 0; count < info5100.getNumberOfStudent(); count++) {
             System.out.print(info5100.getStudents()[count].getName() + " ");
         }
         System.out.println();
+        try {
+            info5100.registerStudent(k);
+        } catch (Exception exception) {
+            System.out.println("Failed to register student " + k.getName() + " because the course " +
+                    info5100.getName() + " is full");
+        }
+
+        // Following code implements the Professor and Builder class
+        Professor professor = new Professor.Builder("Simon", "Jin", "1000")
+                .setAddress("1000 NE Seattle WA")
+                .setPhone("2061234567").build();
+        System.out.println("Professor " + professor.getFirstName() + " " + professor.getLastName() +
+                 " is created using Builder pattern");
     }
 }
