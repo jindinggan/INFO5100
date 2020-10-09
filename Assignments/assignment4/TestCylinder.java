@@ -8,18 +8,18 @@ public class TestCylinder {
         Circle circle = new Circle();
         circle.setColor("yellow");
         circle.setRadius(2.0);
-        circle.output();
+        circle.printOutput();
 
         //Constructed a Cylinder with Cylinder()
         //Run of the program should produce the following output:
         //Radius is 1.0, Height is 1.0, Color is red, Base area is (your answer), Volume is (your answer)
         Cylinder cylinder = new Cylinder();
-        cylinder.output();
+        cylinder.printOutput();
 
         //Constructed a Cylinder with Cylinder(height, radius)
         //Run of the program should produce the following output:
         //Radius is 2.0, Height is 5.0, Color is red, Base area is (your answer), Volume is (your answer)
         Cylinder cylinder1 = new Cylinder(5.0, 2.0);
-        cylinder1.output();
+        cylinder1.printOutput();
     }
 }

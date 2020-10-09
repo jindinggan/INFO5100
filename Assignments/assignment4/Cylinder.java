@@ -40,7 +40,7 @@ public class Cylinder extends Circle {
     }
 
     @Override
-    public void output() {
+    public void printOutput() {
         System.out.println("Radius is " + super.getRadius() + ", Height is " + this.getHeight() + ", Color is "
                 + super.getColor() + ", Base area is " + super.getArea() + ", Volume is " + this.getVolume());
     }

@@ -38,7 +38,7 @@ public class Circle {
         return Math.PI * this.radius * this.radius;
     }
 
-    public void output() {
+    public void printOutput() {
         System.out.println("Radius is " + this.radius + ", Color is " + this.color +
                 ", Base area is " + this.getArea());
     }
