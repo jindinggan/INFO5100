@@ -13,14 +13,13 @@ public class Sundae extends IceCream{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(topping);
-        builder.append(" Sundae with\n");
-        builder.append(name);
-        builder.append(" ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(this.getCost()));
-        builder.append("\n");
-        return builder.toString();
+        String builder = topping +
+                " Sundae with\n" +
+                name +
+                " " +
+                DessertShoppe.cents2dollarsAndCents(this.getCost()) +
+                "\n";
+        return builder;
     }
 
 }

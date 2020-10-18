@@ -20,16 +20,15 @@ public class Cookie extends DessertItem{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(number);
-        builder.append(" @ ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(price));
-        builder.append(" /dz.\n");
-        builder.append(this.getName());
-        builder.append(" ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(this.getCost()));
-        builder.append("\n");
-        return builder.toString();
+        String builder = number +
+                " @ " +
+                DessertShoppe.cents2dollarsAndCents(price) +
+                " /dz.\n" +
+                this.getName() +
+                " " +
+                DessertShoppe.cents2dollarsAndCents(this.getCost()) +
+                "\n";
+        return builder;
     }
 
 }

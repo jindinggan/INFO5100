@@ -18,11 +18,10 @@ public class IceCream extends DessertItem{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(name);
-        builder.append(" ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(this.getCost()));
-        builder.append("\n");
-        return builder.toString();
+        String builder = name +
+                " " +
+                DessertShoppe.cents2dollarsAndCents(this.getCost()) +
+                "\n";
+        return builder;
     }
 }

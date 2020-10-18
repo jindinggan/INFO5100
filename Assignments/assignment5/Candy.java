@@ -20,16 +20,15 @@ public class Candy extends DessertItem{
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(weight);
-        builder.append(" lbs. ");
-        builder.append(" @ ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(price));
-        builder.append(" /lb.\n");
-        builder.append(this.getName());
-        builder.append(" ");
-        builder.append(DessertShoppe.cents2dollarsAndCents(this.getCost()));
-        builder.append("\n");
-        return builder.toString();
+        String builder = weight +
+                " lbs. " +
+                " @ " +
+                DessertShoppe.cents2dollarsAndCents(price) +
+                " /lb.\n" +
+                this.getName() +
+                " " +
+                DessertShoppe.cents2dollarsAndCents(this.getCost()) +
+                "\n";
+        return builder;
     }
 }

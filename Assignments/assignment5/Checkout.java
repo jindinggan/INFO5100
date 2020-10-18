@@ -2,8 +2,8 @@ package assignment5;
 
 import java.util.ArrayList;
 
-public class Checkout extends java.lang.Object{
-    private ArrayList<DessertItem> items;
+public class Checkout {
+    private final ArrayList<DessertItem> items;
 
     public Checkout() {
         items = new ArrayList<>();
