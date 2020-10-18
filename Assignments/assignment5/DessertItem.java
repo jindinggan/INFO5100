@@ -1,6 +1,6 @@
 package assignment5;
 
-public abstract class DessertItem {
+public abstract class DessertItem extends java.lang.Object{
     protected String name;
 
     public DessertItem() {
@@ -16,4 +16,7 @@ public abstract class DessertItem {
     }
 
     public abstract int getCost();
+
+    @Override
+    public abstract String toString();
 }
