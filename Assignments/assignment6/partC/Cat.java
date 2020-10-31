@@ -36,7 +36,6 @@ public class Cat extends Pet implements Boardable{
         startYear = year;
     }
 
-    @SuppressWarnings("checkstyle:BooleanExpressionComplexity")
     @Override
     public void setBoardEnd(int month, int day, int year) {
         if (month > 12 || month < 1 || day > 31 || day < 1 || year < 2010 || year > 2030) {
