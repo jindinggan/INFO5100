@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partA;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partA;
 
 public class MreviewTest {
     public static void main(String[] args) {

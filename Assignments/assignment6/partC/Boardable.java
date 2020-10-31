@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partC;
 
 public interface Boardable {
     public void setBoardStart(int month, int day, int year);

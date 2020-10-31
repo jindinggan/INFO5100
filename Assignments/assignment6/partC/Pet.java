@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partC;
 
 public class Pet {
     private String petName;

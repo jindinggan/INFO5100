@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partC;
 
 public class Cat extends Pet implements Boardable{
     private String hairLength;

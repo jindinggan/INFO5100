@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partC;
 
 public class Dog extends Pet implements Boardable{
     private String size;

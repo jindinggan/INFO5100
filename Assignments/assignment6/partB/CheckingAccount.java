@@ -1,4 +1,4 @@
-package assignment6;
+package assignment6.partB;
 
 // filename: CheckingAccount.java
 // CSC 301 HW#1 Part B
