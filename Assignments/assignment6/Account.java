@@ -51,13 +51,12 @@ public class Account
         ac1.creditTransaction(10.10);
         System.out.println(ac1); // should be $79.85
     }
+    /* Output of the unit test
 
-  /* Output of the unit test
-
-  Account name: John Smith, Account Type: Account, Balance: $100.00
-  Account name: John Smith, Account Type: Account, Balance: $69.75
-  Account name: John Smith, Account Type: Account, Balance: $79.85
-  */
-
-} // end class
+    Account name: John Smith, Account Type: Account, Balance: $100.00
+    Account name: John Smith, Account Type: Account, Balance: $69.75
+    Account name: John Smith, Account Type: Account, Balance: $79.85
+    */
+    // end class
+}
 
