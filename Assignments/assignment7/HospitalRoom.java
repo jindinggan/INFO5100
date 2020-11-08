@@ -7,7 +7,7 @@ public class HospitalRoom {
     private boolean entered = false;
 
     public HospitalRoom() {
-        
+
     }
 
     public synchronized boolean doctorEnter(Doctor1 d) throws InterruptedException {
@@ -15,10 +15,10 @@ public class HospitalRoom {
             entered = true;
             this.doc = d;
             numberOfDoctor++;
-            System.out.println("Doctor " + d.name + " entered, number of doctor " + numberOfDoctor);
+            System.out.println("Doctor " + d + " entered, number of doctor " + numberOfDoctor);
             return entered;
         } else {
-            System.out.println("Doctor " + d.name + " is waiting to Enter, number of doctor " + numberOfDoctor);
+            System.out.println("Doctor " + d + " is waiting to Enter, number of doctor " + numberOfDoctor);
             return false;
         }
     }
@@ -26,7 +26,7 @@ public class HospitalRoom {
     public synchronized boolean doctorLeave(Doctor1 d) throws InterruptedException {
         if (entered) {
             numberOfDoctor--;
-            System.out.println("Doctor " + d.name + " left, number of doctor " + numberOfDoctor);
+            System.out.println("Doctor " + d + " left, number of doctor " + numberOfDoctor);
             entered = false;
             return true;
         } else {
@@ -37,10 +37,10 @@ public class HospitalRoom {
     public synchronized boolean patientEnter(Patient1 p) throws InterruptedException {
         if (numberOfPatient < 3) {
             numberOfPatient++;
-            System.out.println("Patient " + p.name + " entered, number of patients " + numberOfPatient);
+            System.out.println("Patient " + p + " entered, number of patients " + numberOfPatient);
             return true;
         } else {
-            System.out.println("Patient " + p.name + " is waiting to enter, number of patients " + numberOfPatient);
+            System.out.println("Patient " + p + " is waiting to enter, number of patients " + numberOfPatient);
             return false;
         }
     }
@@ -48,7 +48,7 @@ public class HospitalRoom {
     public synchronized boolean patientLeave(Patient1 p) throws InterruptedException {
         if (entered) {
             numberOfPatient--;
-            System.out.println("Patient " + p.name + " left, number of patients " + numberOfPatient);
+            System.out.println("Patient " + p + " left, number of patients " + numberOfPatient);
             entered = false;
             return true;
         } else {
@@ -63,12 +63,21 @@ class Doctor1 {
     public Doctor1(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Doctor " + this.name;
+    }
 }
 
 class Patient1 {
     public String name;
     public Patient1(String name) {
         this.name = name;
+    }
+    @Override
+    public String toString() {
+        return "Patient " + this.name;
     }
 }
 
