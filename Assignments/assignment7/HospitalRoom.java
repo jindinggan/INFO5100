@@ -1,23 +1,29 @@
 package assignment7;
 
 public class HospitalRoom {
+    private Doctor1 doc;
     private static int numberOfDoctor = 0;
     private static int numberOfPatient = 0;
     private boolean entered = false;
 
-    public synchronized boolean doctorEnter(Doctor d) throws InterruptedException {
+    public HospitalRoom() {
+        
+    }
+
+    public synchronized boolean doctorEnter(Doctor1 d) throws InterruptedException {
         if (numberOfDoctor == 0) {
             entered = true;
+            this.doc = d;
             numberOfDoctor++;
             System.out.println("Doctor " + d.name + " entered, number of doctor " + numberOfDoctor);
             return entered;
         } else {
             System.out.println("Doctor " + d.name + " is waiting to Enter, number of doctor " + numberOfDoctor);
-            return true;
+            return false;
         }
     }
 
-    public synchronized boolean doctorLeave(Doctor d) throws InterruptedException {
+    public synchronized boolean doctorLeave(Doctor1 d) throws InterruptedException {
         if (entered) {
             numberOfDoctor--;
             System.out.println("Doctor " + d.name + " left, number of doctor " + numberOfDoctor);
@@ -28,7 +34,7 @@ public class HospitalRoom {
         }
     }
 
-    public synchronized boolean patientEnter(Patient p) throws InterruptedException {
+    public synchronized boolean patientEnter(Patient1 p) throws InterruptedException {
         if (numberOfPatient < 3) {
             numberOfPatient++;
             System.out.println("Patient " + p.name + " entered, number of patients " + numberOfPatient);
@@ -39,7 +45,7 @@ public class HospitalRoom {
         }
     }
 
-    public synchronized boolean patientLeave(Patient p) throws InterruptedException {
+    public synchronized boolean patientLeave(Patient1 p) throws InterruptedException {
         if (entered) {
             numberOfPatient--;
             System.out.println("Patient " + p.name + " left, number of patients " + numberOfPatient);
@@ -52,31 +58,31 @@ public class HospitalRoom {
 
 }
 
-class Doctor {
+class Doctor1 {
     public String name;
-    public Doctor(String name) {
+    public Doctor1(String name) {
         this.name = name;
     }
 }
 
-class Patient {
+class Patient1 {
     public String name;
-    public Patient(String name) {
+    public Patient1(String name) {
         this.name = name;
     }
 }
 
 
-class Main2 {
+class Main3 {
     public static void main(String[] args) {
-        HospitalRoom room = new HospitalRoom();
-        Doctor siva = new Doctor("siva");
-        Doctor john = new Doctor("john");
-        Patient p1 = new Patient("p1");
-        Patient p2 = new Patient("p2");
-        Patient p3= new Patient("p3");
-        Patient p4 = new Patient("p4");
-        Patient p5 = new Patient("p5");
+        HospitalRoom1 room = new HospitalRoom1();
+        Doctor1 siva = new Doctor1("siva");
+        Doctor1 john = new Doctor1("john");
+        Patient1 p1 = new Patient1("p1");
+        Patient1 p2 = new Patient1("p2");
+        Patient1 p3= new Patient1("p3");
+        Patient1 p4 = new Patient1("p4");
+        Patient1 p5 = new Patient1("p5");
         Thread doctor1 = new Thread(() -> {
             try {
                 while(!room.doctorEnter(siva)) {}
